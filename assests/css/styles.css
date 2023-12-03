@@ -14,9 +14,9 @@ header{
     align-items: start;
     justify-content: start;
     padding: 0%;
-    
     margin: 0%;
-    border: solid 0.5px black;
+    border-left: solid 0.5px black;
+    border-right: solid 0.5px black;
     }
 menu h4{
     display: flex;
@@ -31,16 +31,12 @@ menu p{
     border-top: solid 0.5px black;
     border-bottom: solid 0.5px black;
 }
-main{
+.products{
     grid-area: main;
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "main main"
-    ;
+    display: flex;
+    flex-direction: column;
     }
 .title{
-    grid-area: header;
     justify-content: start;
     color: black;
     display: flex;
@@ -52,10 +48,35 @@ main{
 }
 .compra{
     grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3em;
+    padding: 1em;
+}
+.instruments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 0.5em;
+    border: solid 1em black;
+
+}
+.nombreprecio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 footer{
     grid-area: footer;
-    background-color: #66f;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
     }
 .grid-container{
         display: grid;
@@ -63,7 +84,7 @@ footer{
         "header header"
         "menu main"
         "footer footer";
-        grid-template-columns: 10vw 90vw;
+        grid-template-columns: 10vw auto;
         background-color: rgb(218, 207, 207);
     }
 
